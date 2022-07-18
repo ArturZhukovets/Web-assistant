@@ -1,3 +1,88 @@
-h1 {
-color : red;
+body {
+    min-width: 320 px;
+    font-family: 'Playfair Display', serif;
+    color: #626262;
+    font-size: 22px;
 }
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+   color: #4a4b4f;
+   transition: 1s;
+   text-decoration: none;
+   display: inline-block
+
+}
+
+a:hover{
+    color: #898377;
+    transform: scale(1.1);
+}
+
+header .navbar-light {
+    background-color: #fff;
+}
+
+header .navbar-brand {
+    font-family: 'Inconsolata', monospace;
+    font-size: 30px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+header .nav-item{
+    text-transform: uppercase;
+    margin-left: 50px;
+}
+header .nav-item a::after{
+    content: '';
+    display: block;
+    width: 100%;
+    background-color: #ccc;
+    height: 1px;
+    transform: scale(0);
+    transition: all .3s;
+}
+header .nav-item a:hover::after {
+    transform: scale(1);
+}
+
+
+header .nav-link {
+    color: #b4ade;
+}
+
+header .nav-link a:hover {
+    color: #898377;
+}
+
+.btn-dark {
+    width: 20%;
+    font-size: large;
+}
+
+.user {
+    color: #000;
+}
+
+.nav-item {
+    color: #b4ade;
+    text-decoration: none;
+}
+
+.home a {display: inline-block;}
+
+div.shorter {
+margin-top: 90px;
+}
+
+.shorter p {
+    margin-top: 15px;
+}
+.agent p {
+    margin-top: 15px;
+}
+
