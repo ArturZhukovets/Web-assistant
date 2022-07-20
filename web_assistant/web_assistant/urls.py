@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from .views import home, register, user_login, user_logout
+from shorter.views import to_source_url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +26,5 @@ urlpatterns = [
     path('logout/', user_logout, name='logout'),
     path('shorter/', include('shorter.urls')),
     path('user-agent/', include('fake_user_agent.urls')),
+    path('<str:url_id>/', to_source_url, name='to_source_url')
 ]

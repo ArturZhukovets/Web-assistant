@@ -6,7 +6,7 @@ class UrlForm(ModelForm):
     class Meta:
         model = Url
         fields = ('source_url', )
-        labels = {'source_url': 'enter url'}
+        labels = {'source_url': 'Enter your long url'}
         widgets = {
             'source_url': TextInput(attrs={
                 'class': 'form-control',

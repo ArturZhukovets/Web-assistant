@@ -27,10 +27,15 @@
         {% endif %}
     </div>
     <div class="list-shorter">
-        <h1>Here will be display the list of your urls</h1>
+        <h3>Here will be display the list of your urls</h3>
         <ul>
             {% for item in list %}
-            <li><a href="{%url 'to_source_url' item.url_id %}">{{item.source_url}}</a></li>
+            <li>
+                <div class="short_url">
+                <a href="{%url 'to_source_url' item.url_id %}">{{item.source_url}}</a>
+                <a href="{%url 'to_source_url' item.url_id %}">{{domain}}{{item.url_id}}</a>
+                </div>
+            </li>
             <hr>
             {% endfor %}
         </ul>

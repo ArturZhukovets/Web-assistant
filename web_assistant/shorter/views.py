@@ -10,21 +10,21 @@ DOMAIN = 'localhost:8000/'  # insert server address here.
 def shorter(request):
     list_of_urls = Url.objects.all()
     url_id = str(uuid4())[:6]
+    generated_url = DOMAIN + url_id
     if request.method == 'POST':
         form = UrlForm(request.POST)
         if form.is_valid() and not Url.objects.filter(source_url=form.cleaned_data['source_url']):
             new_url = Url(source_url=form.cleaned_data['source_url'], url_id=url_id)
             new_url.save()
-            generated_url = DOMAIN + url_id
-            context = {'form': form, 'url_id': url_id, 'result':generated_url, 'list':list_of_urls}
+            context = {'form': form, 'url_id': url_id, 'result':generated_url, 'list':list_of_urls, 'domain':DOMAIN}
             return render(request, 'shorter/shorter.html', context)
 
         else:
             error = 'This url is already exist'
-            return render(request, 'shorter/shorter.html', {'form': form, 'error':error, 'list':list_of_urls})
+            return render(request, 'shorter/shorter.html', {'form': form, 'error':error, 'list':list_of_urls, 'domain':DOMAIN})
     else:
         form = UrlForm()
-    return render(request, 'shorter/shorter.html', context={'form': form, 'list':list_of_urls})
+    return render(request, 'shorter/shorter.html', context={'form': form, 'list':list_of_urls, 'domain':DOMAIN})
 
 
 def to_source_url(request, url_id):
