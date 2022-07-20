@@ -10,6 +10,9 @@ class Url(models.Model):
     def __str__(self):
         return self.source_url
 
+    class Meta:
+        ordering = ['-id']
+
 
 
 

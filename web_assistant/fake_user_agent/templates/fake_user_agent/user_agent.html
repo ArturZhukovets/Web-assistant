@@ -16,11 +16,13 @@
 {% if user.is_authenticated %}
 <div class="block-content">
     <ul>
-        {% for ua in data %}
+        {% for ua in page.object_list %}
         <li>{{ ua.full_ua }}</li><hr>
 
         {% endfor %}
     </ul>
+    {% include 'include/paginator.html' %}
 </div>
+
 {% endif %}
 {% endblock%}
