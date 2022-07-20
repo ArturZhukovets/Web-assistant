@@ -1,10 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-asdsadas
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Shorter {% endblock %}
+
+{% block greetings %}
+<div class="home">
+    {% if user.is_authenticated %}
+
+    {% else %}
+    <h2>HI! Welcome to my application that allows you to simplify your interactions with the web.  For further work on the site you need to <strong><a class="nav-item" href="{% url 'login' %}">log in</a></strong> or <strong><a
+            class="nav-item" href="{% url 'register' %}">registration</a></strong>. </h2>
+    {% endif %}
+</div>
+    {% if user.is_authenticated %}
+    <div class="shorter-content">
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-dark" type="submit"> Generate </button>
+    </form>
+        {% if error %}
+        <h1>{{error}}</h1>
+        {% endif %}
+
+        {% if url_id %}
+        <h1><a href="{% url 'to_source_url' url_id %}">{{ result }}</a></h1>
+        {% endif %}
+    </div>
+    <div class="list-shorter">
+        <h1>Here will be display the list of your urls</h1>
+        <ul>
+            {% for item in list %}
+            <li><a href="{%url 'to_source_url' item.url_id %}">{{item.source_url}}</a></li>
+            <hr>
+            {% endfor %}
+        </ul>
+
+    </div>
+{% endif %}
+{% endblock %}

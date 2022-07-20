@@ -1,29 +1,31 @@
 body {
-    min-width: 320 px;
+    overflow-x:hidden;
+    background-color: #f8f2fa;
     font-family: 'Playfair Display', serif;
     color: #626262;
     font-size: 22px;
 }
-img{
+img {
     max-width: 100%;
     height: auto;
 }
 
 a {
    color: #4a4b4f;
-   transition: 1s;
+   transition: 0.8s;
    text-decoration: none;
    display: inline-block
 
 }
 
 a:hover{
-    color: #898377;
+    color: black;
     transform: scale(1.1);
+
 }
 
 header .navbar-light {
-    background-color: #fff;
+    background-color: #f8f2fa;
 }
 
 header .navbar-brand {
@@ -31,6 +33,11 @@ header .navbar-brand {
     font-size: 30px;
     color: #000;
     text-transform: uppercase;
+}
+
+header .navbar-brand:hover {
+    text-shadow: #555555 1px 1px 15px;
+
 }
 
 header .nav-item{
@@ -55,8 +62,8 @@ header .nav-link {
     color: #b4ade;
 }
 
-header .nav-link a:hover {
-    color: #898377;
+header .nav-link:hover {
+    color: black;
 }
 
 .btn-dark {
@@ -66,6 +73,9 @@ header .nav-link a:hover {
 
 .user {
     color: #000;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-color: #0f0f0f59;
 }
 
 .nav-item {
@@ -74,9 +84,10 @@ header .nav-link a:hover {
 }
 
 .home a {display: inline-block;}
+.home {text-align: center;}
 
 div.shorter {
-margin-top: 90px;
+margin-top: 150px;
 }
 
 .shorter p {
@@ -86,3 +97,28 @@ margin-top: 90px;
     margin-top: 15px;
 }
 
+div.cont {
+    border-left: 1px solid;
+    border-color: #544941;
+    padding-left: 10px;
+}
+
+
+div.cont h2:hover {
+text-shadow: #555555 1px 1px 15px;
+    }
+
+footer {
+    margin-left: 10px;
+    color: #6262625c;
+    position: fixed;
+    bottom: 0;
+}
+footer a {
+    color: #6262625c;
+    display: inline;
+}
+
+div .shorter-content {
+    text-align: center;
+}
