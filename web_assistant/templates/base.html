@@ -26,7 +26,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mb-4 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="{% url 'shorter' %}">Url-shorter</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Random User-Agent</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'user_agent' %}">Random User-Agent</a></li>
                     </ul>
                     {% if request.user.is_authenticated %}
                     <div class="collapse navbar-collapse justify-content-end">

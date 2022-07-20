@@ -6,7 +6,6 @@
 {% block greetings %}
 <div class="home">
     {% if user.is_authenticated %}
-
     {% else %}
     <h2>HI! Welcome to my application that allows you to simplify your interactions with the web.  For further work on the site you need to <strong><a class="nav-item" href="{% url 'login' %}">log in</a></strong> or <strong><a
             class="nav-item" href="{% url 'register' %}">registration</a></strong>. </h2>

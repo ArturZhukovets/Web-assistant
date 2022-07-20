@@ -23,5 +23,6 @@ urlpatterns = [
     path('register/', register, name='register'),
     path('login/', user_login, name='login'),
     path('logout/', user_logout, name='logout'),
-    path('shorter/', include('shorter.urls'))
+    path('shorter/', include('shorter.urls')),
+    path('user-agent/', include('fake_user_agent.urls')),
 ]

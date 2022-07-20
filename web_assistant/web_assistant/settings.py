@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'shorter'
+    'shorter',
+    'fake_user_agent',
+
 ]
 
 MIDDLEWARE = [
