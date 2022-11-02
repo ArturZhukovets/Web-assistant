@@ -7,7 +7,7 @@ The second application, according to the user’s criteria, generates the UserAg
 
 <hr>
 
-# Web-assistant 
+# Web-assistant (Russian)
 Проект «WEB-ASSISTANT», который
 состоит из двух приложений. <br>
 Первое заключается в возможности пользователя обратиться к
